@@ -2,7 +2,16 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import Services from "../components/services";
+import Prices from "../components/prices";
+import GalleryServices from "../components/gallery";
+
+/**
+ * Todo:
+ * 1) Gallery component - https://www.gatsbyjs.org/packages/gatsby-theme-gallery/
+ * 2) Pricing - check the text on Viber
+ * 3)
+ */
 
 function IndexPage() {
   return (
@@ -11,30 +20,10 @@ function IndexPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-
-      <section className="text-center">
-        <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={catAndHumanIllustration}
-        />
-
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          Hey there! Welcome to your first Gatsby site.
-        </h2>
-
-        <p className="leading-loose">
-          This is a barebones starter for Gatsby styled using{` `}
-          <a
-            className="font-bold text-gray-900 no-underline"
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tailwind CSS
-          </a>
-          , a utility-first CSS framework.
-        </p>
+      <section>
+        <Services />
+        <Prices />
+        <GalleryServices />
       </section>
     </Layout>
   );
